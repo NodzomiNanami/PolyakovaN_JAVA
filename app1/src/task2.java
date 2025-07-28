@@ -17,12 +17,12 @@ public class task2 {
         // Методы
         public void turnOn() {
             isTurnedOn = true;
-            System.out.println("📺 Телевизор включён.");
+            System.out.println("Телевизор " + this.model + " включён. ");
         }
 
         public void turnOff() {
             isTurnedOn = false;
-            System.out.println("📴 Телевизор выключен.");
+            System.out.println("Телевизор " + this.model + " выключен.");
         }
 
         public void increaseVolume() {
@@ -47,6 +47,7 @@ public class task2 {
         }
 
         public void displayInfo() {
+            System.out.println("Информация:");
             System.out.println("Модель: " + model);
             System.out.println("Разрешение: " + resolution);
             System.out.println("Канал: " + currentChannel);
@@ -58,16 +59,15 @@ public class task2 {
     public static void main(String[] args) {
         TV TV_bedroom = new TV("Samsung", "4K");
         TV_bedroom.turnOn();
-        TV_bedroom.displayInfo();
         TV_bedroom.changeChannel(5);
         TV_bedroom.increaseVolume();
-        TV_bedroom.decreaseVolume();
         TV_bedroom.turnOff();
+        TV_bedroom.displayInfo();
 
         TV TV_lounge = new TV("LG", "HD");
         TV_lounge.turnOn();
-        TV_bedroom.changeChannel(1);
-        TV_bedroom.displayInfo();
+        TV_lounge.decreaseVolume();
+        TV_lounge.displayInfo();
     }
         
 }
