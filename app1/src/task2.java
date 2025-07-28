@@ -6,8 +6,7 @@ public class task2 {
         private int volumeLevel;
         private boolean isTurnedOn;
 
-        // Конструктор
-        public TV(String model, String resolution) {
+        public TV(String model, String resolution) { // конструктор
             this.model = model;
             this.resolution = resolution;
             this.currentChannel = 1;
@@ -56,15 +55,19 @@ public class task2 {
         }
     }
 
-    // Пример использования
     public static void main(String[] args) {
-        TV myTV = new TV("Samsung QLED", "4K");
-        myTV.turnOn();
-        myTV.displayInfo();
-        myTV.changeChannel(5);
-        myTV.increaseVolume();
-        myTV.decreaseVolume();
-        myTV.turnOff();
+        TV TV_bedroom = new TV("Samsung", "4K");
+        TV_bedroom.turnOn();
+        TV_bedroom.displayInfo();
+        TV_bedroom.changeChannel(5);
+        TV_bedroom.increaseVolume();
+        TV_bedroom.decreaseVolume();
+        TV_bedroom.turnOff();
+
+        TV TV_lounge = new TV("LG", "HD");
+        TV_lounge.turnOn();
+        TV_bedroom.changeChannel(1);
+        TV_bedroom.displayInfo();
     }
         
 }
